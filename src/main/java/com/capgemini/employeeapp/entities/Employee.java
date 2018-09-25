@@ -1,0 +1,53 @@
+package com.capgemini.employeeapp.entities;
+
+public class Employee {
+	private int employeeId;
+	private String employeeName;
+	private String employeeDepartment;
+	private double employeeSalary;
+
+	public Employee(int employeeId, String employeeName, String employeeDepartment, double employeeSalary) {
+		super();
+		this.setEmployeeId(employeeId);
+		this.setEmployeeName(employeeName);
+		this.setEmployeeDepartment(employeeDepartment);
+		this.setEmployeeSalary(employeeSalary);
+	}
+
+	public Employee() {
+		super();
+
+	}
+
+	public String getEmployeeDepartment() {
+		return employeeDepartment;
+	}
+
+	public void setEmployeeDepartment(String employeeDepartment) {
+		this.employeeDepartment = employeeDepartment;
+	}
+
+	public int getEmployeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+
+	public String getEmployeeName() {
+		return employeeName;
+	}
+
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+
+	public double getEmployeeSalary() {
+		return employeeSalary;
+	}
+
+	public void setEmployeeSalary(double employeeSalary) {
+		this.employeeSalary = employeeSalary;
+	}
+}

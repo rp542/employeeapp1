@@ -1,0 +1,20 @@
+package com.capgemini.employeeapp.repository;
+
+import java.util.List;
+
+import org.springframework.web.servlet.DispatcherServlet;
+
+import com.capgemini.employeeapp.entities.Employee;
+
+public interface EmployeeRepository {
+	public Employee addEmployee(Employee employee);
+
+	public Employee updateEmployee(Employee employee);
+
+	public boolean deleteEmployee(int employeeId);
+
+	public Employee findEmployeeById(int employeeId);
+
+	public List<Employee> findAllEmployees();
+
+}
