@@ -1,14 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" isELIgnored="false"
-	pageEncoding="ISO-8859-1"%>
-<%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>All Employee Details</title>
+<title>Employee Details</title>
 </head>
 <body bgcolor="pink">
-	<h1>All Employee Details</h1>
+	<h1>Employee Details</h1>
 	<hr>
 	<h3>
 		<table border="1" cellspacing="5" cellpadding="5">
@@ -23,7 +20,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="employee" items="${allEmployees}">
+				
 					<tr>
 						<td>${employee.employeeId}</td>
 						<td>${employee.employeeName}</td>
@@ -32,7 +29,7 @@
 						<td><a href="editEmployeePage/${employee.employeeId}">Edit</a></td>
 						<td><a href="deleteEmployee/${employee.employeeId}">Delete</a></td>
 					</tr>
-				</c:forEach>
+				
 			</tbody>
 		</table>
 	</h3>

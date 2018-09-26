@@ -1,5 +1,5 @@
 <html>
-<body>
+<body bgcolor="pink">
 
 <h1>EmployeeApp</h1>
 <h2>

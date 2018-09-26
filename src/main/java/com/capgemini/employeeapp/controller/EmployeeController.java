@@ -32,7 +32,7 @@ public class EmployeeController {
 	@RequestMapping(value = "/addEmployee", method = RequestMethod.POST)
 	public String addNewEmployee(@ModelAttribute Employee employee) {
 		employeeService.addEmployee(employee);
-		return "forward:/findAllEmployees";
+		return "redirect:/findAllEmployees";
 
 	}
 
@@ -49,17 +49,28 @@ public class EmployeeController {
 		return "redirect:/findAllEmployees";
 	}
 
-	@RequestMapping(value = "/editEmployeePage/{employeeIed}", method = RequestMethod.GET)
+	@RequestMapping(value = "/editEmployeePage/{employeeId}", method = RequestMethod.GET)
 	public String editEmployeePage(@PathVariable int employeeId, Model model) {
 		Employee employee = employeeService.findEmployeeById(employeeId);
 		model.addAttribute("employee", employee);
 		return "updateEmployeeForm";
 	}
-
-	@RequestMapping(value = "/updateEmployee", method = RequestMethod.POST)
-	public String updateEmployee(@ModelAttribute Employee employee) {
+	
+	@RequestMapping(value = "/editEmployeePage/updateEmployee", method = RequestMethod.POST)
+	public String updateEmployeePage(@ModelAttribute Employee employee) {
 		employeeService.updateEmployee(employee);
-		return "forward:/findAllEmployees";
+		return "redirect:/findAllEmployees";
+	}
+	@RequestMapping(value = "/findEmployeePage", method = RequestMethod.GET)
+	public String getEmployeeById(Model model) {
+		model.addAttribute("employee", new Employee());
+		return "searchEmployeeForm";
+	}
 
+	@RequestMapping(value = "/searchForEmployee", method = RequestMethod.POST)
+	public String getemployeeById(@ModelAttribute Employee employee,Model model) {
+		Employee emp = employeeService.findEmployeeById(employee.getEmployeeId());
+		model.addAttribute("employee",emp);
+		return "employeeById";
 	}
 }

@@ -7,7 +7,7 @@
 <meta charset="ISO-8859-1">
 <title>Update Employee</title>
 </head>
-<body>
+<body bgcolor="pink">
 
 	<h1>Update Employee</h1>
 	<hr>

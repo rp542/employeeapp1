@@ -8,7 +8,7 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body bgcolor="pink">
 <h1>Add New Employee</h1>
 <form:form action="addEmployee" method="post" modelAttribute="employee">
 <form:label path="employeeId"> Employee Id:</form:label>
